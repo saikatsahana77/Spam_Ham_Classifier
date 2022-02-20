@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <title>Spam Ham Classifier</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        height: 100vh;
+      }
+      #title-cont {
+        background-color: rgb(25, 135, 84);
+        -moz-box-shadow: 0px 0px 16px 15px rgba(25, 135, 84, 1);
+        -webkit-box-shadow: 0px 0px 17px 15px rgba(25, 135, 84, 1);
+        box-shadow: 0px 0px 17px 15px rgba(25, 135, 84, 1);
+        font-family: "Roboto", sans-serif;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 65px);
+      }
+      #lbl {
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+        color: rgb(49, 49, 49);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title-cont">
+      <h1 class="text-center py-5 text-white">Spam Ham Classifier</h1>
+    </div>
+    <div class="container">
+      <form action="/results" , method="post">
+        <div class="my-5">
+          <label for="value" class="form-label" id="lbl"
+            >Put in the text you want to analyze:</label
+          >
+          <textarea
+            class="form-control"
+            id="value"
+            name="value"
+            rows="10"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-success btn-lg">
+          <b><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Submit</b>
+        </button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
